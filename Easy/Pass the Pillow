@@ -1,0 +1,21 @@
+class Solution {
+    public int passThePillow(int n, int time) {
+        boolean flag=true;
+        int index=1;
+        for(int i=1;i<=time;i++){
+            if(flag==true){
+                index++;
+                if(index==n){
+                    flag=false;
+                }
+            }
+            else{
+                index--;
+                if(index==1){
+                    flag=true;
+                }
+            }
+        }
+        return index;
+    }
+}

@@ -1,0 +1,16 @@
+class Solution {
+    public int matrixSum(int[][] nums) {
+        int max=0;
+        int sum=0;
+        for(int i=0;i<nums.length;i++){
+            Arrays.sort(nums[i]);
+        }
+        for(int col=0;col<nums[0].length;col++){
+            for(int row=0;row<nums.length;row++){
+                max=Math.max(max,nums[row][col]);
+            }
+            sum+=max;
+        }
+        return sum;
+    }
+}
